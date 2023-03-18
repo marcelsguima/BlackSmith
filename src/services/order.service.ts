@@ -1,13 +1,13 @@
-import { IUser } from '../interfaces';
-import userModel from '../models/user.model';
+import { Order } from '../interfaces';
+import orderModel from '../models/order.model';
 
-const createUser = async (user:IUser) => {
-  const newProduct = await userModel.createUser(user);
-  return newProduct;
+const getOrders = async (): Promise<Order[]> => {
+  const orders = await orderModel.getOrders();
+  return orders;
 };
 
-const userService = {
-  createUser,
+const orderService = {
+  getOrders,
 };
 
-export default userService;
+export default orderService;

@@ -13,3 +13,25 @@ export interface AllProducts {
   amount: string
   order_Id: number
 }
+
+export interface IUser {
+  username: string
+  vocation: string
+  level: number
+  password: string
+}
+
+export interface Payload {
+  body:{
+    username: string
+    vocation: string
+    level: number
+    password: string
+  }
+}
+
+export interface Order {
+  id: number;
+  userId: number;
+  productsIds: Array<number>;
+}
